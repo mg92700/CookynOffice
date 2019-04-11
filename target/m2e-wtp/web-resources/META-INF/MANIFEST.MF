@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: mouhsin
+Build-Jdk: 11.0.2
+Implementation-Title: General
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.general
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/General/
+Created-By: Maven Integration for Eclipse
+
