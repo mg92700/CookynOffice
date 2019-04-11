@@ -474,7 +474,7 @@ public class UserController {
 			{
 				user=userDb;
 				String NewPassWord=config.generate();
-				user.setPasswordUser(NewPassWord);
+				user.setPasswordUser(cryptageService.encrypt(NewPassWord));
 				
 				userDao.saveAndFlush(user);
 				EmailServiceImpl e= new EmailServiceImpl();
@@ -483,19 +483,19 @@ public class UserController {
 				} catch (AddressException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
-					return "Une erreur c'est produite lors de l'envoie de l'email";	
+					return "Une erreur s'est produite lors de l'envoie de l'email";	
 					
 				} catch (MessagingException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
-					return "Une erreur c'est produite lors de l'envoie de l'email";	
+					return "Une erreur s'est produite lors de l'envoie de l'email";	
 					
 				}
-				return "Email envoyer";	
+				return "Email envoyé";	
 	
 			}
 			else {
-				return "L'email n'est pas vérifier";	
+				return "L'email n'est pas vérifié";	
 			}
 		}
 		return "Utilisateur introuvable";
