@@ -42,6 +42,10 @@ public class AdminStatistiqueController {
 
     @Autowired
     StatistiqueDao statistiqueDao;
+    
+    
+    
+    
 	
 	
 	///renvoie les users cree par date choisie par rapport à la date d'aujourd'hui
