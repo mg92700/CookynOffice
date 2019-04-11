@@ -1,1 +1,4 @@
 /target/
+*.properties
+application.properties
+.properties
