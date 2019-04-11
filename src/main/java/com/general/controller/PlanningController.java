@@ -171,7 +171,7 @@ public class PlanningController {
 		if(planning!=null)
 		{
 			String s=dateFormat.format(planning.getDatePlanning());
-			Date d = new Date(s+" 00:00:00");
+			Date d = new Date(s+" 23:59:59");
 			Planning thePlanning = new Planning();
 			thePlanning.setDatePlanning(d);
 			thePlanning.setRecette(planning.getRecette());
