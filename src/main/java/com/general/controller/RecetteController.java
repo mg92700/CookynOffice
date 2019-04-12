@@ -181,11 +181,18 @@ public class RecetteController {
 						
 						
 						Actualite actuCreate=actualiteDao.findCreateByUser(u, userRecetteDeleteDto.getIdRecette());
+						if(actuCreate!=null)
+						{
 						actualiteDao.delete(actuCreate);
+						}
+						
 						
 						
 						Actualite actuFavoris=actualiteDao.findFavorisByUser(u, userRecetteDeleteDto.getIdRecette());
+						if(actuFavoris!=null)
+						{
 						actualiteDao.delete(actuFavoris);
+						}
 						
 						List<Etape> lstEtape=etapeDao.findAllByrecette(recette);
 						List<Favoris> lstFavoris =favorisDao.findAllByRecette(recette);

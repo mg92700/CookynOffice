@@ -184,9 +184,15 @@ public class FavorisController {
 		recette.setIdRecette(idRecette);
 		
 		Favoris favoris = favorisDao.findByUserAndRecette(user, recette);
+		if(favoris!=null) 
+		{
 		favorisDao.delete(favoris);
+		}
 		Actualite actuFavoris=actualiteDao.findFavorisByUser(user, recette.getIdRecette());
+		if(actuFavoris!=null)
+		{
 		actualiteDao.delete(actuFavoris);
+		}
 		return favoris;
 	}
 
